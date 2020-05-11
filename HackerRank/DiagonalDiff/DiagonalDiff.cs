@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System;
 
-namespace HackerRank
+namespace HackerRank.DiagonalDiff
 {
     internal static class Counter
     {
