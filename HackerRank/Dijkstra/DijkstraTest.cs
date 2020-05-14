@@ -1,13 +1,14 @@
+using BenchmarkDotNet.Attributes;
 using NUnit.Framework;
 
 namespace HackerRank.Dijkstra
 {
-    public class Test
+    public class DijkstraTest
     {
         [Test]
         public void Test4Nodes1Start()
         {
-            var result = Counter.shortestReach(4, new[]
+            var result = Counter.ShortestReach(4, new[]
             {
                 new[] {1, 2, 24},
                 new[] {1, 4, 20},
@@ -21,7 +22,7 @@ namespace HackerRank.Dijkstra
         [Test]
         public void Test4Nodes2Start()
         {
-            var result = Counter.shortestReach(4, new[]
+            var result = Counter.ShortestReach(4, new[]
             {
                 new[] {1, 2, 24},
                 new[] {1, 4, 20},
@@ -35,7 +36,7 @@ namespace HackerRank.Dijkstra
         [Test]
         public void Test6Nodes2Start1Empty()
         {
-            var result = Counter.shortestReach(5, new[]
+            var result = Counter.ShortestReach(5, new[]
             {
                 new[] {1, 2, 24},
                 new[] {1, 4, 20},
@@ -49,7 +50,7 @@ namespace HackerRank.Dijkstra
         [Test]
         public void Test20Nodes()
         {
-            var result = Counter.shortestReach(20, new[]
+            var result = Counter.ShortestReach(20, new[]
             {
                 new[] {1 , 7 , 45},
                 new[] {2 , 14, 15},
@@ -114,9 +115,10 @@ namespace HackerRank.Dijkstra
         }
         
         [Test]
+        [Benchmark]
         public void Test78Nodes()
         {
-            var result = Counter.shortestReach(78, new[]
+            var result = Counter.ShortestReach(78, new[]
             {
                 new [] {1, 49, 8},
                 new [] {2, 75, 36},
@@ -1360,9 +1362,10 @@ namespace HackerRank.Dijkstra
         }
         
         [Test]
+        [Benchmark]
         public void Test94Nodes()
         {
-            var result = Counter.shortestReach(94, new[]
+            var result = Counter.ShortestReach(94, new[]
             {
                 new [] {1, 19, 56},
                 new [] {2, 57, 41},
@@ -1472,9 +1475,10 @@ namespace HackerRank.Dijkstra
         }
         
         [Test]
+        [Benchmark]
         public void Test122Nodes()
         {
-            var result = Counter.shortestReach(122, new[]
+            var result = Counter.ShortestReach(122, new[]
             {
                 new[] {1,50,25},
                 new[] {2,1,47},
